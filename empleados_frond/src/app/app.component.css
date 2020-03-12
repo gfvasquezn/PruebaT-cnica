@@ -1,0 +1,21 @@
+
+.span {
+    margin: auto;
+}
+.color{
+    background-color:darkslategray ;
+    font-size:  20pt  ; 
+    color: white;   
+}
+
+.color-menu{        
+    font-size:  15pt  ;    
+    cursor:pointer;
+}
+.color-menu:hover{
+    background-color:silver;
+}
+
+.menuOptions{
+    color: lightslategray;
+}

@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Editar Contratista</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="data.nombre">
+  
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Apellido</mat-label>
+    <input matInput [(ngModel)]="data.apellido">
+  
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Identificacion</mat-label>
+    <input matInput [(ngModel)]="data.identificacion">
+    <mat-hint></mat-hint>
+  
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Fecha Nacimiento</mat-label>
+    <input matInput [(ngModel)]="data.fechaNacimiento">
+  
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Dirección</mat-label>
+    <input matInput [(ngModel)]="data.direccion">
+    <mat-hint></mat-hint>
+  
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Telefono</mat-label>
+    <input matInput [(ngModel)]="data.telefono">
+  
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.email">
+  
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Empresa</mat-label>
+    <input matInput [(ngModel)]="data.empresa">
+  
+  </mat-form-field>
+
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="actualizar()">Actualizar</button>
+</div>
+

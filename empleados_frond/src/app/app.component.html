@@ -1,0 +1,25 @@
+
+<mat-toolbar layout-align="center center" class="color">
+    <span class="span">Gestión de Obras</span>
+</mat-toolbar>
+<br>
+<button mat-button [matMenuTriggerFor]="aboveMenu" class="color-menu" >  <mat-icon>perm_identity</mat-icon> Contratistas </button>
+<mat-menu #aboveMenu="matMenu" >
+  <button mat-menu-item mat-menu-item [routerLink]="['/contratistas', 'anadir']" routerLinkActive="active"> <mat-icon >note_add</mat-icon>  Crear Contratista</button>
+  <button mat-menu-item mat-menu-item [routerLink]="['/contratistas', 'gestionar']" > <mat-icon >edit</mat-icon>  Gestión de Contratistas</button>
+
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="belowMenu" class="color-menu" class="color-menu"> <mat-icon>group</mat-icon> Empleados</button>
+<mat-menu #belowMenu="matMenu" class="menuOptions">
+  <button mat-menu-item mat-menu-item [routerLink]="['/empleados', 'anadir']" > <mat-icon >note_add</mat-icon>  Crear Empleado</button>
+  <button mat-menu-item mat-menu-item [routerLink]="['/empleados', 'gestionar']" > <mat-icon >edit</mat-icon> Gestión de Empleados</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu" class="color-menu">	<mat-icon>developer_board </mat-icon> Informes</button>
+<mat-menu #beforeMenu="matMenu" >
+  <button mat-menu-item mat-menu-item [routerLink]="['/reportes', 'consultar']" >	<mat-icon> grid_on</mat-icon>Reporte Contratos</button>
+</mat-menu>
+
+<br><br>
+<router-outlet></router-outlet>

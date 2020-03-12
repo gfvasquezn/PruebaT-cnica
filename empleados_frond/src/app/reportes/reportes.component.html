@@ -1,0 +1,32 @@
+
+<table mat-table class="allSize" [dataSource]="contratos" >
+    <ng-container matColumnDef="nombreContratista">
+      <th mat-header-cell *matHeaderCellDef> Nombre Contratista </th>
+      <td mat-cell *matCellDef="let contrato"> {{contrato.contratista.nombre}} {{contrato.contratista.apellido}} </td>
+    </ng-container>  
+    
+    <ng-container matColumnDef="nombreEmpleado">
+        <th mat-header-cell *matHeaderCellDef> Nombre Empleado </th>
+        <td mat-cell *matCellDef="let contrato"> {{contrato.empleado.nombre}} {{contrato.empleado.apellido}} </td>
+      </ng-container> 
+
+  <ng-container matColumnDef="nombreObra">
+      <th mat-header-cell *matHeaderCellDef> Nombre Contrato </th>
+      <td mat-cell *matCellDef="let contrato"> {{contrato.nombreObra}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fechaInicio">
+      <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
+      <td mat-cell *matCellDef="let contrato"> {{contrato.fechaInicio}} </td>
+    </ng-container> 
+    <ng-container matColumnDef="horasTrabajadas">
+        <th mat-header-cell *matHeaderCellDef> Horas trabajadas </th>
+        <td mat-cell *matCellDef="let contrato">{{contrato.empleado.horasTrabajadas}} </td>
+      </ng-container>
+      <ng-container matColumnDef="horasFaltantes">
+        <th mat-header-cell *matHeaderCellDef> Horas Faltantes </th>
+        <td mat-cell *matCellDef="let contrato"> {{contrato.empleado.horasATrabajar}} </td>
+      </ng-container>   
+  
+    <tr mat-header-row *matHeaderRowDef="contratosTitulo"></tr>
+    <tr mat-row *matRowDef="let row; columns: contratosTitulo;"></tr>
+</table>  

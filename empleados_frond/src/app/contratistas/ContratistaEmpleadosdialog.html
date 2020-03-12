@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Asociar empleado empleado</h1>
+<div *ngFor="let empleado of empleados">
+    <mat-radio-button value="empleado.id" (change)="idEmpleado=empleado.id"  >{{empleado.nombre}} {{empleado.apellido}} </mat-radio-button>
+</div>
+<br>
+<button mat-button (click)="asociar(data.id)" color="primary" >  Asociar Empleado </button>
+
+
